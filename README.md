@@ -25,11 +25,11 @@ $ yes zzzzzzz | ./raw2wav.out pulse.wav 5
 Produces a file which plays a 12.5% pulse wave at 1 kHz for 5 seconds.
 
 ```
-$ cat beat.c
+$ cat example.c
 #include <stdio.h>
 int main(void){int t;for(;;++t)putchar((t*5&t>>7)|(t*3&t>>10));}
-$ gcc beat.c
-$ ./a.out | ./raw2wav.out beat.wav 20 22050
+$ gcc example.c
+$ ./a.out | ./raw2wav.out example.wav 20 22050
 ```
 
 Produces the first example of [this video][1], but also makes it play much
