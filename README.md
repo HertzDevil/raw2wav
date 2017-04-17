@@ -7,7 +7,9 @@ losslessly.
 
 ### Synopsis
 
-`raw2wav <filename> [<duration>] [<refresh>]`
+```
+raw2wav <filename> [<duration>] [<refresh>]
+```
 
 ### Description
 
@@ -25,9 +27,6 @@ $ yes zzzzzzz | ./raw2wav.out pulse.wav 5
 Produces a file which plays a 12.5% pulse wave at 1 kHz for 5 seconds.
 
 ```
-$ cat example.c
-#include <stdio.h>
-int main(void){int t;for(;;++t)putchar((t*5&t>>7)|(t*3&t>>10));}
 $ gcc example.c
 $ ./a.out | ./raw2wav.out example.wav 20 22050
 ```
